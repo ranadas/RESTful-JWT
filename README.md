@@ -18,3 +18,5 @@ https://justinrodenbostel.com/2014/05/30/part-5-integrating-spring-security-with
 
 Setup and preload database for spring integration/functional tests: 
 https://www.leveluplunch.com/java/tutorials/022-preload-database-execute-sql-spring-testing/
+
+http://patorjk.com/software/taag/#p=display&f=Graffiti&t=Chatty
