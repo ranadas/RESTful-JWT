@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com</groupId>
-    <artifactId>rdas</artifactId>
+    <groupId>com.rdas</groupId>
+    <artifactId>rest-jwt</artifactId>
     <version>1.1-SNAPSHOT</version>
 
     <parent>
@@ -19,7 +19,7 @@
         <project.build.resourceEncoding>UTF-8</project.build.resourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <lombok_version>1.16.10</lombok_version>
+        <lombok_version>1.16.14</lombok_version>
         <jjwt.version>0.7.0</jjwt.version>
         <disable.checks>true</disable.checks>
     </properties>
