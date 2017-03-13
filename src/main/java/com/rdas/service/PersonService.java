@@ -25,10 +25,9 @@ public class PersonService {
         persons = new ArrayList<>();
         persons.add(new Person(1L, "Hello", "World"));
         persons.add(new Person(2L, "Foo", "Bar"));
-        System.out.println(personRepository);
     }
 
     public List<Person> getAllPersons() {
-        return persons;
+        return personRepository.findAll();
     }
 }
