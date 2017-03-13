@@ -32,4 +32,6 @@ public class Person {
     @NotNull
     @Size(min = 4, max = 50)
     private String email;
+
+    private String password = "password";
 }
