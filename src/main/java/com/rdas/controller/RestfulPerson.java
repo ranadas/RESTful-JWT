@@ -3,10 +3,7 @@ package com.rdas.controller;
 import com.rdas.model.Person;
 import com.rdas.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.PostConstruct;
 import java.util.List;
@@ -37,5 +34,10 @@ public class RestfulPerson {
         return persons.stream()
                 .filter(person -> name.equalsIgnoreCase(person.getName()))
                 .findAny().orElse(null);
+    }
+
+    @RequestMapping(path = "/persons/add", method = RequestMethod.POST)
+    public Person add(@RequestBody Person person) {
+        return personService.saveAsNew(person);
     }
 }
