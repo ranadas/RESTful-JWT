@@ -33,5 +33,5 @@ public class Person {
     @Size(min = 4, max = 50)
     private String email;
 
-    private String password = "password";
+    private final String password = "password";
 }
