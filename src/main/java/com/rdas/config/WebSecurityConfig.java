@@ -18,26 +18,26 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 /**
  * Created by rdas on 13/03/2017.
  */
-//@SuppressWarnings("SpringJavaAutowiringInspection")
+@SuppressWarnings("SpringJavaAutowiringInspection")
 @Configuration
-@EnableWebSecurity
-@EnableGlobalMethodSecurity(prePostEnabled = true)
+//@EnableWebSecurity
+//@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class WebSecurityConfig extends GlobalAuthenticationConfigurerAdapter { //extends WebSecurityConfigurerAdapter {
     @Autowired
     private PersonRepository personRepository;
 
-    @Bean
-    UserDetailsService userDetailsService() {
-        return new UserDetailsService() {
-            @Override
-            public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-                Person account = personRepository.findByName(username);
-                if (account != null) {
-                    return new User(account.getName(), account.getPassword(), true, true, true, true, AuthorityUtils.createAuthorityList("USER"));
-                } else {
-                    throw new UsernameNotFoundException("could not find the user '" + username + "'");
-                }
-            }
-        };
-    }
+//    @Bean
+//    UserDetailsService userDetailsService() {
+//        return new UserDetailsService() {
+//            @Override
+//            public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+//                Person account = personRepository.findByName(username);
+//                if (account != null) {
+//                    return new User(account.getName(), account.getPassword(), true, true, true, true, AuthorityUtils.createAuthorityList("USER"));
+//                } else {
+//                    throw new UsernameNotFoundException("could not find the user '" + username + "'");
+//                }
+//            }
+//        };
+//    }
 }
