@@ -10,6 +10,8 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -25,6 +27,13 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class PersonRepositoryTest {
     @Autowired
     private PersonRepository personRepository;
+
+    @Test
+    public void testAllUsersAreFound(){
+        List<Person> all = personRepository.findAll();
+        assertThat(all, is(notNullValue()));
+        assertThat(all.size(), is(4));
+    }
 
     @Test
     public void testThatAKnownUserCanBeSearched(){
