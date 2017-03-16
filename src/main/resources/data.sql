@@ -12,7 +12,7 @@ INSERT INTO USER_AUTHORITY (USER_ID, AUTHORITY_ID) VALUES (2, 1);
 INSERT INTO USER_AUTHORITY (USER_ID, AUTHORITY_ID) VALUES (3, 1);
 
 
-INSERT INTO PERSON ( ID, NAME, EMAIL) VALUES (1, 'Rana Das', 'rdas@email.com');
-INSERT INTO PERSON ( ID, NAME, EMAIL) VALUES (2, 'Jennifer Simonetti', 'jen@email.com');
-INSERT INTO PERSON ( ID, NAME, EMAIL) VALUES (3, 'Connal Murphy', 'cm@email.com');
-INSERT INTO PERSON ( ID, NAME, EMAIL) VALUES (4, 'Zack Murphy', 'zm@email.com');
+INSERT INTO PERSON ( ID, NAME, EMAIL) VALUES (100, 'Rana Das', 'rdas@email.com');
+INSERT INTO PERSON ( ID, NAME, EMAIL) VALUES (200, 'Jennifer Simonetti', 'jen@email.com');
+INSERT INTO PERSON ( ID, NAME, EMAIL) VALUES (300, 'Connal Murphy', 'cm@email.com');
+INSERT INTO PERSON ( ID, NAME, EMAIL) VALUES (400, 'Zack Murphy', 'zm@email.com');
